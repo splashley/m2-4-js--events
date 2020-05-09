@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #565656;
+      }
+
+      .section-1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #div1 {
+        background: pink;
+      }
+
+      #div2 {
+        background: white;
+      }
+
+      #div3 {
+        background: pink;
+      }
+
+      #stopWatch { 
+        width: 280px; 
+        text-align: center; 
+        display: block; 
+        padding: 20px; 
+        margin: 0 auto; } 
+        
+      #timer { 
+        width: auto; 
+        height: auto; 
+        padding: 10px; 
+        display: block; 
+        text-align: center; 
+         } 
+
+        button { 
+          cursor: pointer;
+          padding: 10px;
+          margin: 10px;
+        } 
+
+        #fulltime { 
+            display:none; 
+            font-size:16px; 
+            font-weight:bold; } 
+
+        #start {
+          background-color: green;
+        }
+
+        #stop {
+          background-color: red;
+        }
+
+        #countdown {
+          padding: 20px;
+        }
+
+        #enterTime {
+          padding: 10px;
+        }
+
+        #startbtn {
+          cursor: pointer;
+          padding: 10px;
+          margin: 10px;
+          background-color: green;
+          font-weight:bold;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="section-1">
+      <div id="div1"><h1>SECTION 1</h1></div>
+      <div id="div2"><h1>SECTION 2</h1>
+      <section id="stopWatch"> 
+        <p id="timer"> Time : 00:00:00 
+        </p> 
+        <button onclick="startStopWatch()" id="start"> START
+        </button> 
+        <button onclick="stopStopWatch()" id="stop"> STOP
+           </button> 
+          </div>
+      <div id="div3"><h1>SECTION 3</h1>
+        <h4>COUNTDOWN</h2>
+        <section id="countdown">
+        <input id="enterTime" value=1000>
+        <button id="startbtn"> START </button> 
+      </section>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -11,3 +11,10 @@
 // OPTIONAL
 // Feel free to add some CSS to this once you're done
 // --------------------------------------------------
+
+const itWorksText = "Yay this works!";
+
+let message = document.querySelector('body');
+message.addEventListener('click', function() {
+    message.innerText = itWorksText;
+});

@@ -21,3 +21,38 @@
 // Stretch goal
 // Make the countdown live (show a countdown that updates several times a
 // second)
+
+
+
+
+
+let winner = true;
+const winningMessage = "You've won! Congrats!";
+const loserMessage = "Haha loser";
+
+let message = document.querySelector("body");
+
+const time = document.getElementById("time");
+let span = document.querySelector("span");
+span.innerText = "3 to 5";
+
+const status = function () {
+  if (winner) {
+    message.innerText = winningMessage;
+  } else {
+    message.innerText = loserMessage;
+  }
+};
+
+document.addEventListener("click", status);
+
+const timeoutFunction = function () {
+  winner = false;
+};
+
+setTimeout(timeoutFunction, randomNumber(3000, 5000));
+
+function randomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
